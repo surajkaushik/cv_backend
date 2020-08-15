@@ -26,9 +26,9 @@ CREATE TABLE EDUCATION(
 
 INSERT INTO PERSON (EMAIL_ID, NAME, PHONE_NUMBER,GIT,LINKEDIN) VALUES ('kaushiksuraj1102@gmail.com','Suraj Kaushik','7358740550','https://github.com/surajkaushik','https://www.linkedin.com/in/surajkaushik'); 
 
-INSERT INTO EDUCATION VALUES ('1','2015 - 2019','SRM-Institute of Science and Technology','BTech-CSE','88.49% & 8.64/10 CGPA');
+INSERT INTO EDUCATION VALUES ('1','2015 - 2019','SRM-Institute of Science and Technology','BTech-CSE','88.49%');
 INSERT INTO EDUCATION VALUES ('2','2014 - 2015','AIR FORCE SCHOOL','HIGHER SECONDARY','74.60%');
-INSERT INTO EDUCATION VALUES ('3','2012 - 2013','Kendriya Vidyalaya','SECONDARY','9/10 CGPA');
+INSERT INTO EDUCATION VALUES ('3','2012 - 2013','Kendriya Vidyalaya','SECONDARY','85.5%');
 
 SELECT * FROM PERSON;
 SELECT * FROM EDUCATION;
