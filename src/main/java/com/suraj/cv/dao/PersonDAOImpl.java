@@ -27,6 +27,8 @@ public class PersonDAOImpl implements PersonDAO{
 			person.setEmailId(personEntity.getEmailId());
 			person.setName(personEntity.getName());
 			person.setPhoneNumber(personEntity.getPhoneNumber());
+			person.setGit(personEntity.getGit());
+			person.setLinkedIn(personEntity.getLinkedIn());
 			listOfPerson.add(person);
 		}
 		return listOfPerson;

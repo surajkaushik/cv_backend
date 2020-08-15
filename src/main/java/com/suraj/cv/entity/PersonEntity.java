@@ -17,6 +17,29 @@ public class PersonEntity {
 		
 	@Column(name="PHONE_NUMBER")
 	private String phoneNumber;
+	
+	@Column(name="LINKEDIN")
+	private String linkedIn;
+	
+	@Column(name="GIT")
+	private String git;
+
+	
+	public String getLinkedIn() {
+		return linkedIn;
+	}
+
+	public void setLinkedIn(String linkedIn) {
+		this.linkedIn = linkedIn;
+	}
+
+	public String getGit() {
+		return git;
+	}
+
+	public void setGit(String git) {
+		this.git = git;
+	}
 
 	public String getEmailId() {
 		return emailId;

@@ -8,12 +8,13 @@ CREATE TABLE PERSON(
 	EMAIL_ID VARCHAR(50),
 	NAME VARCHAR(50) NOT NULL,
 	PHONE_NUMBER VARCHAR(10) NOT NULL UNIQUE,
+	GIT VARCHAR(100) NOT NULL,
+	LINKEDIN VARCHAR(100) NOT NULL,
 	constraint CV_PERSON_EMAIL_ID_PK primary key ( EMAIL_ID )
 );
 
 
-INSERT INTO PERSON (EMAIL_ID, NAME, PHONE_NUMBER) VALUES ('kaushiksuraj1102@gmail.com','Suraj Kaushik','7358740550'); 
-
+INSERT INTO PERSON (EMAIL_ID, NAME, PHONE_NUMBER,GIT,LINKEDIN) VALUES ('kaushiksuraj1102@gmail.com','Suraj Kaushik','7358740550','https://github.com/surajkaushik','https://www.linkedin.com/in/surajkaushik'); 
 
 SELECT * FROM PERSON;
 
