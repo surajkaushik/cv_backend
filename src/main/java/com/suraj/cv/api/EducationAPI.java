@@ -50,7 +50,7 @@ public class EducationAPI {
 			return new ResponseEntity<String>(message,HttpStatus.CREATED);
 			}
 			catch (Exception e) {
-				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()));
+				throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty("EDUCATION_API_ALREADY_EXIST"));
 			}
 	}
 }
