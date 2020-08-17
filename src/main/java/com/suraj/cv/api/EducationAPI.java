@@ -36,7 +36,7 @@ public class EducationAPI {
 		return new ResponseEntity<List<Education>>(all, HttpStatus.OK);
 		}
 		catch (Exception e) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()));
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()),e);
 		}
 		
 	}

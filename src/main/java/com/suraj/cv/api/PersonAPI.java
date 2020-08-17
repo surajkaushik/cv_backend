@@ -33,7 +33,7 @@ public class PersonAPI {
 		return new ResponseEntity<List<Person>>(allPerson, HttpStatus.OK);
 		}
 		catch (Exception e) {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()));
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()),e);
 		}
 		
 	}

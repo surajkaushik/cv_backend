@@ -9,6 +9,7 @@ DROP TABLE CERTIFICATION;
 DROP TABLE PERSON;
 DROP TABLE EDUCATION;
 DROP TABLE FEEDBACK;
+DROP TABLE EXPERIENCE;
 
 CREATE TABLE PERSON(
 	EMAIL_ID VARCHAR(50),
@@ -25,7 +26,7 @@ CREATE TABLE EDUCATION(
 	NAMEOFINS VARCHAR(100) NOT NULL,
 	DEGREE VARCHAR(50) NOT NULL UNIQUE,
 	MARKS VARCHAR(50) NOT NULL,
-	constraint EDUCATION_ID_PK primary key (EDUCATION_ID)
+	constraint CV_EDUCATION_ID_PK primary key (EDUCATION_ID)
 );
 
 CREATE TABLE FEEDBACK(
@@ -42,6 +43,15 @@ CREATE TABLE CERTIFICATION(
 	constraint CV_CERTIFICATE_ID_PK primary key ( CERTIFICATE_ID )
 );
 
+CREATE TABLE EXPERIENCE(
+	EXPERIENCE_ID VARCHAR(50),
+	YEAR VARCHAR(100) NOT NULL,
+	NAME VARCHAR(4000) NOT NULL,
+	FIELD VARCHAR(4000) NOT NULL,
+	constraint CV_EXPERIENCE_ID_PK primary key (EXPERIENCE_ID)
+);
+
+
 INSERT INTO PERSON (EMAIL_ID, NAME, PHONE_NUMBER,GIT,LINKEDIN) VALUES ('kaushiksuraj1102@gmail.com','Suraj Kaushik','7358740550','https://github.com/surajkaushik','https://www.linkedin.com/in/surajkaushik'); 
 
 INSERT INTO EDUCATION VALUES ('1','2015-2019','SRM-Institute of Science and Technology','BTech-CSE','88.49');
@@ -53,6 +63,7 @@ INSERT INTO FEEDBACK values ('kaushiksuraj@gmail.com','Suraj','The colors of thi
 INSERT INTO CERTIFICATION VALUES ('H209-7815','AZ-900: Microsoft Azure Fundamentals','https://drive.google.com/file/d/1-K1MM52gu7_Wa1jVGjjDXmB4c2hravsm/view?usp=sharing');
 INSERT INTO CERTIFICATION VALUES ('3ef55f297200','Problem Solving (Basic)','https://www.hackerrank.com/certificates/3ef55f297200');
 INSERT INTO CERTIFICATION VALUES ('2c76b10b8e1f','Java (Basic)','https://www.hackerrank.com/certificates/2c76b10b8e1f');
+INSERT INTO CERTIFICATION VALUES ('c34d4f50fa7d',' The Complete Angular 9+ Course for Beginners','https://www.udemy.com/certificate/UC-584c3116-6ac2-48d7-b7e8-c34d4f50fa7d/');
 INSERT INTO CERTIFICATION VALUES ('220969','Azure Concepts(Linux Academy)','https://linuxacademy.com/profile/u/cert/id/220969');
 INSERT INTO CERTIFICATION VALUES ('Ae-kcBVaJFiFEV6NUXXi0oBw0sf3','Learning Cloud Computing: Core Concepts','https://drive.google.com/file/d/1UbmloWBaPxYTUZv4Z8WVEzbdyQLpIliH/view?usp=sharing');
 INSERT INTO CERTIFICATION VALUES ('d627fb2db3bc48ecabe0d59551de9d9c','Build Your Own Chatbot','https://courses.cognitiveclass.ai/certificates/d627fb2db3bc48ecabe0d59551de9d9c');
@@ -61,16 +72,16 @@ INSERT INTO CERTIFICATION VALUES ('PWYQCM5CT5C8','Using Databases with Python','
 INSERT INTO CERTIFICATION VALUES ('76RV68EGBUBF','Technical Support Fundamentals','https://www.coursera.org/account/accomplishments/certificate/76RV68EGBUBF');
 INSERT INTO CERTIFICATION VALUES ('DSSPRKREJHN4','Programming for Everybody','https://www.coursera.org/account/accomplishments/certificate/DSSPRKREJHN4');
 INSERT INTO CERTIFICATION VALUES ('A3M7M36DDZB5','Python Data Structures','https://www.coursera.org/account/accomplishments/certificate/A3M7M36DDZB5');
-INSERT INTO CERTIFICATION VALUES ('','','');
-INSERT INTO CERTIFICATION VALUES ('','','');
-INSERT INTO CERTIFICATION VALUES ('','','');
-INSERT INTO CERTIFICATION VALUES ('','','');
+INSERT INTO CERTIFICATION VALUES ('1sGZ70MHE2YtnSk8O8P0QbH36XPPXw','Using OneDrive For Business','https://drive.google.com/file/d/1sGZ70MHE2YtnSk8O8P0QbH36XPPXw-Au/view');
 INSERT INTO CERTIFICATION VALUES ('Ty2BZiMhj4cJKqsh8','Technology Consulting Virtual Internship (Deloitte)','https://insidesherpa.s3.amazonaws.com/completion-certificates/Deloitte/FqFtWwQzNxJ8Qsh5H_Deloitte_Rs6RysQXm9ouRBMC5_completion_certificate.pdf');
 
-
-
+INSERT INTO EXPERIENCE VALUES('1','DEC 2019 - AUG 2020','INFOSYS','SYSTEM ENGINEER TRAINEE');
+INSERT INTO EXPERIENCE VALUES('2','FEB 2018 - APR 2018','SOCIOWASH','DIGITAL MARKETING INTERN');
+INSERT INTO EXPERIENCE VALUES('3','DEC 2017 - JAN 2018','HYPSTAR','YOUTH INFLUENCER');
+INSERT INTO EXPERIENCE VALUES('4','DEC 2016 - DEC 2016','PERFETTI VAN MELLE','IT DEPARTMENT');
 
 SELECT * FROM PERSON;
 SELECT * FROM EDUCATION;
 SELECT * FROM FEEDBACK;
 SELECT * FROM CERTIFICATION;
+SELECT * FROM EXPERIENCE;

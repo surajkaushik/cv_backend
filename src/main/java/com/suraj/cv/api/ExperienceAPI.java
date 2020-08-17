@@ -14,26 +14,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.suraj.cv.model.Certification;
-import com.suraj.cv.model.Education;
-import com.suraj.cv.service.CertificationService;
+import com.suraj.cv.model.Experince;
+import com.suraj.cv.service.ExperienceService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("CertificationAPI")
-public class CertificationAPI {
+@RequestMapping("ExperienceAPI")
+public class ExperienceAPI {
 	
 	@Autowired
-	private CertificationService certificationService;
+	private ExperienceService experienceService;
 	
 	@Autowired
 	private Environment environment;
 	
-	@GetMapping(value = "/getCertifications")
-	public ResponseEntity<List<Certification>> getCertifications() throws Exception{
+	@GetMapping(value = "/getExperienceList")
+	public ResponseEntity<List<Experince>> getExperienceList() throws Exception{
 		try {
-		List<Certification> all=certificationService.getCertifications();
-		return new ResponseEntity<List<Certification>>(all, HttpStatus.OK);
+		List<Experince> all=experienceService.getExperienceList();
+		return new ResponseEntity<List<Experince>>(all, HttpStatus.OK);
 		}
 		catch (Exception e) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, environment.getProperty(e.getMessage()),e);
@@ -41,12 +40,11 @@ public class CertificationAPI {
 		
 	}
 	
-	@PostMapping(value = "/addCertificate")
-	public ResponseEntity<String> addCertificate(@RequestBody Certification certification) throws Exception{
+	@PostMapping(value = "/addExperince")
+	public ResponseEntity<String> addExperince(@RequestBody Experince experince) throws Exception{
 		try {
-			String i=certificationService.addCertificate(certification);
-			
-			String message=environment.getProperty("CERTIFICATION_API_ADDED")+i;
+			String i= experienceService.addExperince(experince);
+			String message=environment.getProperty("EXPERIENCE_API_ADDED")+i;
 
 			return new ResponseEntity<String>(message,HttpStatus.CREATED);
 			}
