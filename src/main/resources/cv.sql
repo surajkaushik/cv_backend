@@ -30,7 +30,7 @@ CREATE TABLE EDUCATION(
 CREATE TABLE FEEDBACK(
 	EMAIL_ID VARCHAR(50),
 	NAME VARCHAR(50) NOT NULL,
-	COM VARCHAR(200) NOT NULL,
+	COM VARCHAR(4000) NOT NULL,
 	constraint CV_FEEDBACK_EMAIL_ID_PK primary key ( EMAIL_ID )
 );
 
@@ -40,7 +40,9 @@ INSERT INTO EDUCATION VALUES ('1','2015-2019','SRM-Institute of Science and Tech
 INSERT INTO EDUCATION VALUES ('2','2014-2015','AIR FORCE SCHOOL','HIGHER SECONDARY','74.60');
 INSERT INTO EDUCATION VALUES ('3','2012-2013','Kendriya Vidyalaya','SECONDARY','85.5');
 
-INSERT INTO FEEDBACK values ('kaushiksuraj1102@gmail.com','Suraj','A very good angular project.');
+INSERT INTO FEEDBACK values ('kaushiksuraj@gmail.com','Suraj','The colors of this blog make it look appealing. Also, the font size used is different from common ‘Times New Roman,’ which makes it appear better.');
+
+
 
 SELECT * FROM PERSON;
 SELECT * FROM EDUCATION;
