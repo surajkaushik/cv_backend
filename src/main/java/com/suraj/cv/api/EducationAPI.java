@@ -44,8 +44,9 @@ public class EducationAPI {
 	@PostMapping(value = "/addEducation")
 	public ResponseEntity<String> addEducation(@RequestBody Education education) throws Exception{
 		try {
-			Integer i= educationService.addEducation(education);
+			String i= educationService.addEducation(education);
 			String message=environment.getProperty("EDUCATION_API_ADDED")+i;
+
 			return new ResponseEntity<String>(message,HttpStatus.CREATED);
 			}
 			catch (Exception e) {

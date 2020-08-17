@@ -7,5 +7,5 @@ import com.suraj.cv.model.Education;
 public interface EducationDAO {
 	public List<Education> getEducationList();
 	
-	public Integer addEducation(Education education);
+	public String addEducation(Education education);
 }

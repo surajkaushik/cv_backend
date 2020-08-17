@@ -11,9 +11,8 @@ import javax.persistence.Table;
 public class EducationEntity {
 		
 		@Id
-		@GeneratedValue(strategy=GenerationType.IDENTITY)
 		@Column(name = "EDUCATION_ID")
-		private Integer educationId;
+		private String educationId;
 	
 		@Column(name = "YEAR")
 		private String year;
@@ -27,12 +26,11 @@ public class EducationEntity {
 		@Column(name="MARKS")
 		private String marks;
 
-		
-		public Integer getEducationId() {
+		public String getEducationId() {
 			return educationId;
 		}
 
-		public void setEducationId(Integer educationId) {
+		public void setEducationId(String educationId) {
 			this.educationId = educationId;
 		}
 

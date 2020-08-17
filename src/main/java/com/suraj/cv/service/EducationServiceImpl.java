@@ -21,7 +21,7 @@ public class EducationServiceImpl implements EducationService {
 	}
 
 	@Override
-	public Integer addEducation(Education education) throws Exception {
+	public String addEducation(Education education) throws Exception {
 		return educationDAO.addEducation(education);
 	}
 

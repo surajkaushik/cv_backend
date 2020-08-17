@@ -37,10 +37,17 @@ public class EducationDAOImpl implements EducationDAO {
 	}
 
 	@Override
-	public Integer addEducation(Education education) {
+	public String addEducation(Education education) {
 		
 		EducationEntity ee= new EducationEntity();
 		
+		System.out.println(education.getDegree());
+		System.out.println(education.getEducationId());
+		System.out.println(education.getMarks());
+		System.out.println(education.getNameOfIns());
+		System.out.println(education.getYear());
+		
+		ee.setEducationId(education.getEducationId());
 		ee.setDegree(education.getDegree());
 		ee.setMarks(education.getMarks());
 		ee.setNameOfIns(education.getNameOfIns());
