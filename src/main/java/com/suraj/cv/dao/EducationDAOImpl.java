@@ -36,4 +36,19 @@ public class EducationDAOImpl implements EducationDAO {
 		return educationList;
 	}
 
+	@Override
+	public Integer addEducation(Education education) {
+		
+		EducationEntity ee= new EducationEntity();
+		
+		ee.setDegree(education.getDegree());
+		ee.setMarks(education.getMarks());
+		ee.setNameOfIns(education.getNameOfIns());
+		ee.setYear(education.getYear());
+		
+		entityManager.persist(ee);
+		
+		return ee.getEducationId();
+	}
+
 }
