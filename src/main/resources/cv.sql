@@ -5,6 +5,7 @@
 --DROP SEQUENCE hibernate_sequence;
 --CREATE SEQUENCE hibernate_sequence START WITH 1000 INCREMENT BY 4;
 
+DROP TABLE CERTIFICATION;
 DROP TABLE PERSON;
 DROP TABLE EDUCATION;
 DROP TABLE FEEDBACK;
@@ -34,6 +35,13 @@ CREATE TABLE FEEDBACK(
 	constraint CV_FEEDBACK_EMAIL_ID_PK primary key ( EMAIL_ID )
 );
 
+CREATE TABLE CERTIFICATION(
+	CERTIFICATE_ID VARCHAR(4000),
+	CERTIFICATE_NAME VARCHAR(4000) NOT NULL,
+	CERTIFICATE_LINK VARCHAR(4000) NOT NULL,
+	constraint CV_CERTIFICATE_ID_PK primary key ( CERTIFICATE_ID )
+);
+
 INSERT INTO PERSON (EMAIL_ID, NAME, PHONE_NUMBER,GIT,LINKEDIN) VALUES ('kaushiksuraj1102@gmail.com','Suraj Kaushik','7358740550','https://github.com/surajkaushik','https://www.linkedin.com/in/surajkaushik'); 
 
 INSERT INTO EDUCATION VALUES ('1','2015-2019','SRM-Institute of Science and Technology','BTech-CSE','88.49');
@@ -42,8 +50,9 @@ INSERT INTO EDUCATION VALUES ('3','2012-2013','Kendriya Vidyalaya','SECONDARY','
 
 INSERT INTO FEEDBACK values ('kaushiksuraj@gmail.com','Suraj','The colors of this blog make it look appealing. Also, the font size used is different from common ‘Times New Roman,’ which makes it appear better.');
 
-
+INSERT INTO CERTIFICATION VALUES ('Ty2BZiMhj4cJKqsh8','Technology Consulting Virtual Internship (Deloitte)','https://insidesherpa.s3.amazonaws.com/completion-certificates/Deloitte/FqFtWwQzNxJ8Qsh5H_Deloitte_Rs6RysQXm9ouRBMC5_completion_certificate.pdf');
 
 SELECT * FROM PERSON;
 SELECT * FROM EDUCATION;
 SELECT * FROM FEEDBACK;
+SELECT * FROM CERTIFICATION;
